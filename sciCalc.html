@@ -24,17 +24,112 @@
 		  <div class="mdl-layout__drawer">
 		    <span class="mdl-layout-title">Menu</span>
 		  </div>
-		  <main class="mdl-layout__content">
+		    <main class="mdl-layout__content">
 		    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-		      <div class="page-content">
-		      	<!-- Textfield with Floating Label -->
-					<form action="#">
-					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text" id="sample3">
-					    <label class="mdl-textfield__label" for="sample3">Result</label>
-					  </div>
-					</form>
-		      </div>
+					<div style="margin-left: 30%">
+						<div class="page-content" style= "margin-top:25px">
+							<!-- Textfield with Floating Label -->
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="sample3">
+									<label class="mdl-textfield__label" for="sample3">Result</label>
+								</div>
+									<button type="button" class="mdl-button show-modal">Input Fucntion</button>
+									<dialog class="mdl-dialog">
+										<div class="mdl-dialog__content">
+											<p>
+												Allow this site to collect usage data to improve your experience?
+											</p>
+										</div>
+										<div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+											<button type="button" class="mdl-button">Agree</button>
+											<button type="button" class="mdl-button close">Disagree</button>
+										</div>
+									</dialog>
+									<script>
+										var dialog = document.querySelector('dialog');
+										var showModalButton = document.querySelector('.show-modal');
+										if (! dialog.showModal) {
+											dialogPolyfill.registerDialog(dialog);
+										}
+										showModalButton.addEventListener('click', function() {
+											dialog.showModal();
+										});
+										dialog.querySelector('.close').addEventListener('click', function() {
+											dialog.close();
+										});
+									</script>
+							</form>
+						</div>
+						<!-- Raised button with ripple -->
+						<div style= "margin-top:20px">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								1
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								2
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								3
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								+
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								sin
+							</button>
+						</div>
+						<div style= "margin-top:20px">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								4
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								5
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								6
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								-
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								cos
+							</button>
+						</div>
+						<div style= "margin-top:20px">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								7
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								8
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								9
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								x
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								tan
+							</button>
+						</div>
+						<div style= "margin-top:20px">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								0
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								00
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								=
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								/
+							</button>
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+								log
+							</button>
+					</div>
 		    </section>
 		    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
 		      <div class="page-content"><!-- Your content goes here --></div>
